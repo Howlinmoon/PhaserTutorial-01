@@ -12,6 +12,8 @@
 </head>
 <body>
 
+http://www.photonstorm.com/phaser/tutorial-making-your-first-phaser-game
+
 <script type="text/javascript">
 
 var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
@@ -73,6 +75,10 @@ function create() {
 }
 
 function update() {
+	// collision check time between the player and the platforms (ground)
+	game.physics.arcade.collide(player, platforms);
+	
+	
 }
 
 </script>
